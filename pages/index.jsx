@@ -90,6 +90,8 @@ export default function Home({ posts }) {
     border: 0.2rem solid var(--white);
     border-radius: 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.9) 6px 6px 0px;
+    display: grid;
+    grid-template-rows: 33% auto auto;
 
     h3 {
       color: var(--grey);

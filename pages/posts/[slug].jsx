@@ -145,7 +145,14 @@ export default function Post({ title, image, body }) {
 
     p {
       font-size: var(--h6);
-      margin: 1rem 0;
+      margin: 1.25rem 0;
+    }
+
+    ul {
+      li {
+        list-style: inside;
+        margin: 0.5rem 0;
+      }
     }
   `;
 
@@ -180,6 +187,7 @@ export default function Post({ title, image, body }) {
                   quality={100}
                   layout="responsive"
                   loading="lazy"
+                  objectFit="cover"
                 />
               </BlogImage>
             </BlogMedia>
