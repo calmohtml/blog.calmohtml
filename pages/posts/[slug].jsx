@@ -154,6 +154,12 @@ export default function Post({ title, image, body }) {
         margin: 0.5rem 0;
       }
     }
+
+    blockquote {
+      background: var(--blue);
+      padding: 1rem 0.5rem;
+      border-radius: 0.4rem;
+    }
   `;
 
   const BackButton = styled.a`
