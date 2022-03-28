@@ -118,11 +118,7 @@ export default function Home({ posts }) {
       <Header />
       <main className="">
         <h1>Blog</h1>
-        <p>
-          I&apos;ve been writing online since 2014, mostly about web development
-          and tech careers. In total, I&apos;ve written 68 articles on my blog.
-          Use the search below to filter by title.
-        </p>
+        <p>Posts más recientes de Joan Segovia.</p>
         <RecentPosts>
           {mappedPosts.length ? (
             mappedPosts.map((post, index) => (

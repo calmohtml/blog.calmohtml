@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     --grey: #9ba4b4;
   }
 
+  
+
   *, 
   *::before, 
   *::after {
@@ -63,9 +65,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #__next {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     padding: 2vh;
+  }
+
+  @media (min-width: 640px) {
+    #__next {
+      width: 80%;
+      margin: 0 auto;
+      padding: 2vh;
+    }
   }
 `;
 
