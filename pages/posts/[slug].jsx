@@ -49,6 +49,7 @@ export const getServerSideProps = async (pageContext) => {
           title: post.title,
           image: post.mainImage,
           body: post.body,
+          publishedAt: post.publishedAt,
         },
       };
     }
@@ -57,7 +58,7 @@ export const getServerSideProps = async (pageContext) => {
   }
 };
 
-export default function Post({ title, image, body }) {
+export default function Post({ title, image, body, publishedAt }) {
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
@@ -181,6 +182,16 @@ export default function Post({ title, image, body }) {
         <Blog>
           <BlogTitle>
             <h2>{title}</h2>
+            <p>
+              Publicado:{" "}
+              {new Date(publishedAt).toLocaleDateString("es-ar", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+              .
+            </p>
           </BlogTitle>
           {imageUrl && (
             <BlogMedia>
