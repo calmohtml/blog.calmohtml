@@ -153,6 +153,10 @@ export default function Post({ title, image, body, publishedAt }) {
       li {
         list-style: inside;
         margin: 0.5rem 0;
+
+        a {
+          color: var(--white);
+        }
       }
     }
 
