@@ -16,7 +16,7 @@ export const getServerSideProps = async () => {
 
   const query = encodeURIComponent(
     // This is GROQ language, similar to GraphQL.
-    `*[_type == "post"]` // no slice specified --> all posts are returned
+    `*[_type == "post"] | order(_createdAt desc)` // no slice specified --> all posts are returned in descending order
   );
 
   const url = `https://${projectID}.api.sanity.io/v1/data/query/${dataset}?query=${query}`;
